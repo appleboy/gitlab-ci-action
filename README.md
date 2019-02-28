@@ -2,7 +2,7 @@
 
 [GitHub Action](https://developer.github.com/actions/) for trigger [gitlab-ci](https://about.gitlab.com/gitlab-ci) jobs.
 
-<img src="./images/message.png">
+<img src="./images/trigger.png">
 
 ## Usage 
 
@@ -17,8 +17,6 @@ action "Trigger New Job" {
   ]
 }
 ```
-
-<img src="images/workflow.png">
 
 ## GitLab Setting
 
