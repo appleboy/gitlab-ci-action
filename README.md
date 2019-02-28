@@ -39,6 +39,5 @@ How to get the project ID? going to your project’s `Settings ➔ General` unde
 
 ## Secrets
 
-[* `WEBHOOK_ID`: webhook id of channel.
-* `WEBHOOK_TOKEN`: webhook token of channel.](* GITLBA_TOKEN - Required. A unique trigger token can be obtained when [adding a new trigger](https://docs.gitlab.com/ee/ci/triggers/#adding-a-new-trigger).
+* GITLBA_TOKEN - Required. A unique trigger token can be obtained when [adding a new trigger](https://docs.gitlab.com/ee/ci/triggers/#adding-a-new-trigger).
 * GITLBA_PROJECT_ID - Required. project id.)
