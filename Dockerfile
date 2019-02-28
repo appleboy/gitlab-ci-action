@@ -1,4 +1,4 @@
-FROM appleboy/drone-gitlab-ci:linux-amd64
+FROM appleboy/drone-gitlab-ci:1.0.1-linux-amd64
 
 # Github labels
 LABEL "com.github.actions.name"="Trigger GitLab CI"
