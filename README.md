@@ -2,7 +2,7 @@
 
 [GitHub Action](https://developer.github.com/actions/) for trigger [gitlab-ci](https://about.gitlab.com/gitlab-ci) jobs.
 
-<img src="./images/trigger.png">
+<img src="./images/trigger-gitlab.png">
 
 ## Usage 
 
