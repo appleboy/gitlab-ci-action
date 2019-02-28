@@ -2,4 +2,4 @@
 
 set -eu
 
-/bin/drone-discord
+/bin/drone-gitlab-ci
