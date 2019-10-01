@@ -2,8 +2,6 @@
 
 [GitHub Action](https://github.com/features/actions) for trigger [gitlab-ci](https://about.gitlab.com/gitlab-ci) jobs.
 
-![gitlab](./images/trigger-gitlab.png)
-
 ## Usage
 
 Trigger New GitLab CI Job.
