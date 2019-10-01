@@ -1,10 +1,10 @@
 # 🚀 GitLab CI for GitHub Actions
 
-[GitHub Action](https://developer.github.com/actions/) for trigger [gitlab-ci](https://about.gitlab.com/gitlab-ci) jobs.
+[GitHub Action](https://github.com/features/actions) for trigger [gitlab-ci](https://about.gitlab.com/gitlab-ci) jobs.
 
-<img src="./images/trigger-gitlab.png">
+![gitlab](./images/trigger-gitlab.png)
 
-## Usage 
+## Usage
 
 Trigger New GitLab CI Job.
 
