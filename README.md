@@ -8,14 +8,22 @@
 
 Trigger New GitLab CI Job.
 
-```
-action "Trigger New Job" {
-  uses = "appleboy/gitlab-ci-action@master"
-  secrets = [
-    "GITLBA_PROJECT_ID",
-    "GITLBA_TOKEN",
-  ]
-}
+```yml
+name: trigger gitlab job
+on: [push]
+jobs:
+
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+    - name: trigger Job
+      uses: appleboy/gitlab-ci-action@master
+      with:
+        url: "http://example.com"
+        token: ${{ secrets.TOKEN }}
+        project_id: 100
+
 ```
 
 ## GitLab Setting
@@ -32,43 +40,33 @@ How to get the project ID? going to your project’s `Settings ➔ General` unde
 
 Specific the GitLab host URL:
 
-```
-action "Trigger New Job" {
-  uses = "appleboy/gitlab-ci-action@master"
-  env = {
-    GITLBA_HOST = "https://example.com"
-    DEBUG = "true"
-  }
-  secrets = [
-    "GITLBA_PROJECT_ID",
-    "GITLBA_TOKEN",
-  ]
-}
+```yml
+- name: trigger Job
+  uses: appleboy/gitlab-ci-action@master
+  with:
+    url: "http://example.com"
+    token: ${{ secrets.TOKEN }}
+    debug: true
+    project_id: 100
 ```
 
 Other specific `branch` or `tag` name:
 
-```
-action "Trigger New Job" {
-  uses = "appleboy/gitlab-ci-action@master"
-  env = {
-    DEBUG = "true"
-    GITLBA_REF = "v1.1.1"
-  }
-  secrets = [
-    "GITLBA_PROJECT_ID",
-    "GITLBA_TOKEN",
-  ]
-}
+```yml
+- name: trigger Job
+  uses: appleboy/gitlab-ci-action@master
+  with:
+    url: "http://example.com"
+    token: ${{ secrets.TOKEN }}
+    debug: true
+    project_id: 100
+    ref: 'v1.0.0'
 ```
 
-## Environment variables
+## Input variables
 
-* GITLBA_HOST - Optional. gitlab-ci base url, default as `https://gitlab.com`
-* GITLBA_REF - Optional. Triggers can be used to force a pipeline rerun of a specific ref (`branch` or `tag`) with an API call. Default as `master`.
-* DEBUG - Optional. show the debug message.
-
-## Secrets
-
-* GITLBA_TOKEN - Required. A unique trigger token can be obtained when [adding a new trigger](https://docs.gitlab.com/ee/ci/triggers/#adding-a-new-trigger).
-* GITLBA_PROJECT_ID - Required. project id.
+* hot - Optional. gitlab-ci base url, default as `https://gitlab.com`
+* token - Required. A unique trigger token can be obtained when [adding a new trigger](https://docs.gitlab.com/ee/ci/triggers/#adding-a-new-trigger).
+* project_id - Required. project id.
+* ref - Optional. Triggers can be used to force a pipeline rerun of a specific ref (`branch` or `tag`) with an API call. Default as `master`.
+* debug - Optional. show the debug message.

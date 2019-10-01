@@ -7,10 +7,14 @@ inputs:
     default: 'https://gitlab.com'
   token:
     description: 'gitlab-ci token'
+    required: true
   ref:
     description: 'gitlab-ci valid refs are only the branches and tags'
   project_id:
     description: 'gitlab project id'
+    required: true
+  debug:
+    description: 'debug mode'
 runs:
   using: 'docker'
   image: 'Dockerfile'
