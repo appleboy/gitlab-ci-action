@@ -20,13 +20,13 @@ action "Trigger New Job" {
 
 ## GitLab Setting
 
-See the detail documentation for [Triggering pipelines through the API](https://docs.gitlab.com/ee/ci/triggers/). How to get the token from a new trigger? You can add a new trigger by going to your project’s `Settings ➔ CI/CD` under Triggers. 
+See the detail documentation for [Triggering pipelines through the API](https://docs.gitlab.com/ee/ci/triggers/). How to get the token from a new trigger? You can add a new trigger by going to your project’s `Settings ➔ CI/CD` under Triggers.
 
-<img src="images/token.png">
+![token](./images/token.png)
 
 How to get the project ID? going to your project’s `Settings ➔ General` under Gerneral project.
 
-<img src="images/projectID.png">
+![projectID](./images/projectID.png)
 
 ## Example
 
