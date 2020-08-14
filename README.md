@@ -30,7 +30,7 @@ See the detail documentation for [Triggering pipelines through the API](https://
 
 ![token](./images/token.png)
 
-How to get the project ID? going to your project’s `Settings ➔ General` under Gerneral project.
+How to get the project ID? going to your project’s `Settings ➔ General` under General project.
 
 ![projectID](./images/projectID.png)
 
