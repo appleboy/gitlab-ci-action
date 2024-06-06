@@ -18,7 +18,7 @@ jobs:
     - name: trigger Job
       uses: appleboy/gitlab-ci-action@master
       with:
-        url: "http://example.com"
+        host: "http://example.com"
         token: ${{ secrets.TOKEN }}
         project_id: 100
 
@@ -42,7 +42,7 @@ Specific the GitLab host URL:
 - name: trigger Job
   uses: appleboy/gitlab-ci-action@master
   with:
-    url: "http://example.com"
+    host: "http://example.com"
     token: ${{ secrets.TOKEN }}
     debug: true
     project_id: 100
@@ -54,7 +54,7 @@ Other specific `branch` or `tag` name:
 - name: trigger Job
   uses: appleboy/gitlab-ci-action@master
   with:
-    url: "http://example.com"
+    host: "http://example.com"
     token: ${{ secrets.TOKEN }}
     debug: true
     project_id: 100
