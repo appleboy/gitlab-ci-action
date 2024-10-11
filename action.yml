@@ -1,24 +1,24 @@
-name: 'Trigger GitLab CI Job'
-description: 'Triggering GitLab CI Job through the API'
-author: 'Bo-Yi Wu'
+name: "Trigger GitLab CI Job"
+description: "Triggering GitLab CI Job through the API"
+author: "Bo-Yi Wu"
 inputs:
   host:
-    description: 'gitlab-ci base url'
-    default: 'https://gitlab.com'
+    description: "gitlab-ci base url"
+    default: "https://gitlab.com"
   token:
-    description: 'gitlab-ci token'
+    description: "gitlab-ci token"
     required: true
   ref:
-    description: 'gitlab-ci valid refs are only the branches and tags'
+    description: "gitlab-ci valid refs are only the branches and tags"
   project_id:
-    description: 'gitlab project id'
+    description: "gitlab project id"
     required: true
   debug:
-    description: 'debug mode'
+    description: "debug mode"
 runs:
-  using: 'docker'
-  image: 'Dockerfile'
+  using: "docker"
+  image: "Dockerfile"
 
 branding:
-  icon: 'check-circle'
-  color: 'orange'
+  icon: "check-circle"
+  color: "orange"
