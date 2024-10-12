@@ -1,5 +1,7 @@
 # 🚀 GitLab CI for GitHub Actions
 
+[![trigger gitlab job](https://github.com/appleboy/gitlab-ci-action/actions/workflows/ci.yml/badge.svg)](https://github.com/appleboy/gitlab-ci-action/actions/workflows/ci.yml)
+
 [GitHub Action](https://github.com/features/actions) for trigger [gitlab-ci](https://about.gitlab.com/gitlab-ci) jobs. See Trigger pipelines by [using the API](https://docs.gitlab.com/ee/ci/triggers/index.html).
 
 ## Usage
