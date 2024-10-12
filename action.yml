@@ -10,6 +10,7 @@ inputs:
     required: true
   ref:
     description: "gitlab-ci valid refs are only the branches and tags"
+    default: "main"
   project_id:
     description: "gitlab project id"
     required: true

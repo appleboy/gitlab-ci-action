@@ -64,7 +64,7 @@ Other specific `branch` or `tag` name:
 ## Input variables
 
 * host - Optional. gitlab-ci base url, default as `https://gitlab.com`
-* token - Required. A unique trigger token can be obtained when [adding a new trigger](https://docs.gitlab.com/ee/ci/triggers/#adding-a-new-trigger).
+* token - Required. A unique trigger token can be obtained when [adding a new trigger](https://docs.gitlab.com/ee/ci/triggers/index.html).
 * project_id - Required. project id.
-* ref - Optional. Triggers can be used to force a pipeline rerun of a specific ref (`branch` or `tag`) with an API call. Default as `master`.
+* ref - Optional. Triggers can be used to force a pipeline rerun of a specific ref (`branch` or `tag`) with an API call. Default as `main`.
 * debug - Optional. show the debug message.
