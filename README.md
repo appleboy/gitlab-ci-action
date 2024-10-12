@@ -69,4 +69,6 @@ Other specific `branch` or `tag` name:
 * token - Required. A unique trigger token can be obtained when [adding a new trigger](https://docs.gitlab.com/ee/ci/triggers/index.html).
 * project_id - Required. project id.
 * ref - Optional. Triggers can be used to force a pipeline rerun of a specific ref (`branch` or `tag`) with an API call. Default as `main`.
+* insecure - Optional. Allow insecure SSL connections. Default as `false`.
+* variables - Optional. Variables to be passed to the triggered pipeline. Default as empty. example: `key1=value01,key2=value02`.
 * debug - Optional. show the debug message.

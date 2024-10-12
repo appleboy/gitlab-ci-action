@@ -14,6 +14,10 @@ inputs:
   project_id:
     description: "gitlab project id"
     required: true
+  insecure:
+    description: "insecure mode"
+  variables:
+    description: "pass CI/CD variables"
   debug:
     description: "debug mode"
 runs:
