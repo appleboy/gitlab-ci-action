@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: trigger Job
-        uses: appleboy/gitlab-ci-action@master
+        uses: ./
         with:
           token: ${{ secrets.PROJECT_TOKEN }}
           project_id: ${{ secrets.PROJECT_ID }}
