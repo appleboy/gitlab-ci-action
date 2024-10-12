@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: trigger Job
-      uses: appleboy/gitlab-ci-action@master
+      uses: appleboy/gitlab-ci-action@v1.1.0
       with:
         host: "http://example.com"
         token: ${{ secrets.TOKEN }}
@@ -42,7 +42,7 @@ Specific the GitLab host URL:
 
 ```yml
 - name: trigger Job
-  uses: appleboy/gitlab-ci-action@master
+  uses: appleboy/gitlab-ci-action@v1.1.0
   with:
     host: "http://example.com"
     token: ${{ secrets.TOKEN }}
@@ -54,13 +54,26 @@ Other specific `branch` or `tag` name:
 
 ```yml
 - name: trigger Job
-  uses: appleboy/gitlab-ci-action@master
+  uses: appleboy/gitlab-ci-action@v1.1.0
   with:
     host: "http://example.com"
     token: ${{ secrets.TOKEN }}
     debug: true
     project_id: 100
     ref: 'v1.0.0'
+```
+
+Pass the variables to the triggered pipeline:
+
+```yml
+- name: trigger Job
+  uses: appleboy/gitlab-ci-action@1.1.0
+  with:
+    host: "http://example.com"
+    token: ${{ secrets.TOKEN }}
+    debug: true
+    project_id: 100
+    variables: 'key1=value01,key2=value02'
 ```
 
 ## Input variables
