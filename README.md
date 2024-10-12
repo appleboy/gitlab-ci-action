@@ -60,7 +60,7 @@ Other specific `branch` or `tag` name:
     token: ${{ secrets.TOKEN }}
     debug: true
     project_id: 100
-    ref: 'v1.0.0'
+    ref: v1.0.0
 ```
 
 Pass the variables to the triggered pipeline:
@@ -73,7 +73,7 @@ Pass the variables to the triggered pipeline:
     token: ${{ secrets.TOKEN }}
     debug: true
     project_id: 100
-    variables: 'key1=value01,key2=value02'
+    variables: key1=value01,key2=value02
 ```
 
 ## Input variables
