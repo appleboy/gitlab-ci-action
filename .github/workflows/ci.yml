@@ -13,3 +13,10 @@ jobs:
         with:
           token: ${{ secrets.PROJECT_TOKEN }}
           project_id: ${{ secrets.PROJECT_ID }}
+
+      - name: pass variables
+        uses: ./
+        with:
+          token: ${{ secrets.PROJECT_TOKEN }}
+          project_id: ${{ secrets.PROJECT_ID }}
+          variables: TEST=2000,key2=value2
