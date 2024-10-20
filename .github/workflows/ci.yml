@@ -8,7 +8,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: trigger Job
+      - name: trigger pipeline
         uses: ./
         with:
           token: ${{ secrets.PROJECT_TOKEN }}
@@ -20,3 +20,10 @@ jobs:
           token: ${{ secrets.PROJECT_TOKEN }}
           project_id: ${{ secrets.PROJECT_ID }}
           variables: TEST=2000,key2=value2
+
+      - name: wait for pipeline
+        uses: ./
+        with:
+          token: ${{ secrets.PROJECT_TOKEN }}
+          project_id: ${{ secrets.PROJECT_ID }}
+          wait: true
