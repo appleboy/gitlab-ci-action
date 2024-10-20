@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: trigger Job
-      uses: appleboy/gitlab-ci-action@v1.1.0
+      uses: appleboy/gitlab-ci-action@v1.2.0
       with:
         host: "http://example.com"
         token: ${{ secrets.TOKEN }}
@@ -42,7 +42,7 @@ Specific the GitLab host URL:
 
 ```yml
 - name: trigger Job
-  uses: appleboy/gitlab-ci-action@v1.1.0
+  uses: appleboy/gitlab-ci-action@v1.2.0
   with:
     host: "http://example.com"
     token: ${{ secrets.TOKEN }}
@@ -54,7 +54,7 @@ Other specific `branch` or `tag` name:
 
 ```yml
 - name: trigger Job
-  uses: appleboy/gitlab-ci-action@v1.1.0
+  uses: appleboy/gitlab-ci-action@v1.2.0
   with:
     host: "http://example.com"
     token: ${{ secrets.TOKEN }}
@@ -67,7 +67,7 @@ Pass the variables to the triggered pipeline:
 
 ```yml
 - name: trigger Job
-  uses: appleboy/gitlab-ci-action@1.1.0
+  uses: appleboy/gitlab-ci-action@v1.2.0
   with:
     host: "http://example.com"
     token: ${{ secrets.TOKEN }}
@@ -80,7 +80,7 @@ Wait for pipeline to complete, default as `false`:
 
 ```yml
 - name: trigger Job
-  uses: appleboy/gitlab-ci-action@1.1.0
+  uses: appleboy/gitlab-ci-action@v1.2.0
   with:
     host: "http://example.com"
     token: ${{ secrets.TOKEN }}
@@ -93,7 +93,7 @@ Timeout waiting for pipeline to complete, default as `1h`:
 
 ```yml
 - name: trigger Job
-  uses: appleboy/gitlab-ci-action@1.1.0
+  uses: appleboy/gitlab-ci-action@v1.2.0
   with:
     host: "http://example.com"
     token: ${{ secrets.TOKEN }}
@@ -107,7 +107,7 @@ Interval waiting for pipeline to complete, default as `5s`:
 
 ```yml
 - name: trigger Job
-  uses: appleboy/gitlab-ci-action@1.1.0
+  uses: appleboy/gitlab-ci-action@v1.2.0
   with:
     host: "http://example.com"
     token: ${{ secrets.TOKEN }}
