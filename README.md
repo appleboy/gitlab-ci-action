@@ -85,3 +85,6 @@ Pass the variables to the triggered pipeline:
 * insecure - Optional. Allow insecure SSL connections. Default as `false`.
 * variables - Optional. Variables to be passed to the triggered pipeline. Default as empty. example: `key1=value01,key2=value02`.
 * debug - Optional. show the debug message.
+* wait - Optional. wait for pipeline to complete
+* timeout - Optional. timeout waiting for pipeline to complete
+* interval - Optional. interval waiting for pipeline to complete
