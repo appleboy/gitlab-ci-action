@@ -42,4 +42,4 @@ jobs:
           token: ${{ secrets.PROJECT_TOKEN }}
           project_id: ${{ secrets.PROJECT_ID }}
           wait: true
-          timeout: 10s
+          timeout: 5s
