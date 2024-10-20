@@ -19,7 +19,7 @@ jobs:
         with:
           token: ${{ secrets.PROJECT_TOKEN }}
           project_id: ${{ secrets.PROJECT_ID }}
-          variables: TEST=2000,key2=value2
+          variables: TEST=2000
 
       - name: wait for pipeline
         uses: ./
