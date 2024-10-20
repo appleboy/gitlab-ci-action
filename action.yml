@@ -1,5 +1,5 @@
-name: "Trigger GitLab CI Job"
-description: "Triggering GitLab CI Job through the API"
+name: "Trigger GitLab CI Pipeline"
+description: "Triggering GitLab CI Pipeline through the API"
 author: "Bo-Yi Wu"
 inputs:
   host:
@@ -20,6 +20,12 @@ inputs:
     description: "pass CI/CD variables"
   debug:
     description: "debug mode"
+  timeout:
+    description: "timeout waiting for pipeline to complete"
+  interval:
+    description: "interval waiting for pipeline to complete"
+  wait:
+    description: "wait for pipeline to complete"
 runs:
   using: "docker"
   image: "Dockerfile"
