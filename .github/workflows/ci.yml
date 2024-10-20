@@ -34,3 +34,10 @@ jobs:
           token: ${{ secrets.PROJECT_TOKEN }}
           project_id: ${{ secrets.PROJECT_ID }}
           interval: 1s
+
+      - name: change wait timeout
+        uses: ./
+        with:
+          token: ${{ secrets.PROJECT_TOKEN }}
+          project_id: ${{ secrets.PROJECT_ID }}
+          timeout: 5s
