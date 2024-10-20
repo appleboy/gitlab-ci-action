@@ -27,3 +27,10 @@ jobs:
           token: ${{ secrets.PROJECT_TOKEN }}
           project_id: ${{ secrets.PROJECT_ID }}
           wait: true
+
+      - name: change wait interval
+        uses: ./
+        with:
+          token: ${{ secrets.PROJECT_TOKEN }}
+          project_id: ${{ secrets.PROJECT_ID }}
+          interval: 1s
