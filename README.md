@@ -76,6 +76,47 @@ Pass the variables to the triggered pipeline:
     variables: key1=value01,key2=value02
 ```
 
+Wait for pipeline to complete, default as `false`:
+
+```yml
+- name: trigger Job
+  uses: appleboy/gitlab-ci-action@1.1.0
+  with:
+    host: "http://example.com"
+    token: ${{ secrets.TOKEN }}
+    debug: true
+    project_id: 100
+    wait: true
+```
+
+Timeout waiting for pipeline to complete, default as `1h`:
+
+```yml
+- name: trigger Job
+  uses: appleboy/gitlab-ci-action@1.1.0
+  with:
+    host: "http://example.com"
+    token: ${{ secrets.TOKEN }}
+    debug: true
+    project_id: 100
+    wait: true
+    timeout: 60s
+```
+
+Interval waiting for pipeline to complete, default as `5s`:
+
+```yml
+- name: trigger Job
+  uses: appleboy/gitlab-ci-action@1.1.0
+  with:
+    host: "http://example.com"
+    token: ${{ secrets.TOKEN }}
+    debug: true
+    project_id: 100
+    wait: true
+    interval: 10s
+```
+
 ## Input variables
 
 * host - Optional. gitlab-ci base url, default as `https://gitlab.com`
@@ -85,6 +126,6 @@ Pass the variables to the triggered pipeline:
 * insecure - Optional. Allow insecure SSL connections. Default as `false`.
 * variables - Optional. Variables to be passed to the triggered pipeline. Default as empty. example: `key1=value01,key2=value02`.
 * debug - Optional. show the debug message.
-* wait - Optional. wait for pipeline to complete
-* timeout - Optional. timeout waiting for pipeline to complete
-* interval - Optional. interval waiting for pipeline to complete
+* wait - Optional. wait for pipeline to complete. Default as `false`.
+* timeout - Optional. timeout waiting for pipeline to complete. Default as `1h`.
+* interval - Optional. interval waiting for pipeline to complete. Default as `5s`.
