@@ -28,9 +28,9 @@ jobs:
 
 ## GitLab Setting
 
-See the detail documentation for [Triggering pipelines through the API](https://docs.gitlab.com/ee/ci/triggers/). How to get the token from a new trigger? You can add a new trigger by going to your project’s `Settings ➔ CI/CD` under **Pipeline trigger tokens**.
+See the detail documentation for [Triggering pipelines through the API](https://docs.gitlab.com/ee/ci/triggers/). Create your access token by going to your `User Settings ➔ Access Tokens` under Access Tokens.
 
-![token](./images/newtoken.png)
+![token](./images/user_token.png)
 
 How to get the project ID? going to your project’s `Settings ➔ General` under General project.
 
