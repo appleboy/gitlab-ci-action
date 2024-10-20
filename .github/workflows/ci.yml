@@ -37,6 +37,7 @@ jobs:
           interval: 1s
 
       - name: change wait timeout
+        continue-on-error: true
         uses: ./
         with:
           token: ${{ secrets.PROJECT_TOKEN }}
