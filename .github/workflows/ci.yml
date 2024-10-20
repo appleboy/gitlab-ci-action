@@ -33,6 +33,7 @@ jobs:
         with:
           token: ${{ secrets.PROJECT_TOKEN }}
           project_id: ${{ secrets.PROJECT_ID }}
+          wait: true
           interval: 1s
 
       - name: change wait timeout
@@ -40,4 +41,5 @@ jobs:
         with:
           token: ${{ secrets.PROJECT_TOKEN }}
           project_id: ${{ secrets.PROJECT_ID }}
+          wait: true
           timeout: 5s
