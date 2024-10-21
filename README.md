@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: trigger Job
-      uses: appleboy/gitlab-ci-action@v1.3.0
+      uses: ghcr.io/appleboy/gitlab-ci-action@v1.3.0
       with:
         host: "http://example.com"
         token: ${{ secrets.TOKEN }}
@@ -42,7 +42,7 @@ Specific the GitLab host URL:
 
 ```yml
 - name: trigger Job
-  uses: appleboy/gitlab-ci-action@v1.3.0
+  uses: ghcr.io/appleboy/gitlab-ci-action@v1.3.0
   with:
     host: "http://example.com"
     token: ${{ secrets.TOKEN }}
@@ -54,7 +54,7 @@ Other specific `branch` or `tag` name:
 
 ```diff
   - name: trigger Job
-    uses: appleboy/gitlab-ci-action@v1.3.0
+    uses: ghcr.io/appleboy/gitlab-ci-action@v1.3.0
     with:
       host: "http://example.com"
       token: ${{ secrets.TOKEN }}
@@ -67,7 +67,7 @@ Pass the variables to the triggered pipeline:
 
 ```diff
   - name: trigger Job
-    uses: appleboy/gitlab-ci-action@v1.3.0
+    uses: ghcr.io/appleboy/gitlab-ci-action@v1.3.0
     with:
       host: "http://example.com"
       token: ${{ secrets.TOKEN }}
@@ -80,7 +80,7 @@ Wait for pipeline to complete, default as `false`:
 
 ```diff
   - name: trigger Job
-    uses: appleboy/gitlab-ci-action@v1.3.0
+    uses: ghcr.io/appleboy/gitlab-ci-action@v1.3.0
     with:
       host: "http://example.com"
       token: ${{ secrets.TOKEN }}
@@ -93,7 +93,7 @@ Timeout waiting for pipeline to complete, default as `1h`:
 
 ```diff
   - name: trigger Job
-    uses: appleboy/gitlab-ci-action@v1.3.0
+    uses: ghcr.io/appleboy/gitlab-ci-action@v1.3.0
     with:
       host: "http://example.com"
       token: ${{ secrets.TOKEN }}
@@ -107,7 +107,7 @@ Interval waiting for pipeline to complete, default as `5s`:
 
 ```diff
   - name: trigger Job
-    uses: appleboy/gitlab-ci-action@v1.3.0
+    uses: ghcr.io/appleboy/gitlab-ci-action@v1.3.0
     with:
       host: "http://example.com"
       token: ${{ secrets.TOKEN }}
@@ -121,7 +121,7 @@ Allow insecure SSL connections, default as `false`:
 
 ```diff
   - name: trigger Job
-    uses: appleboy/gitlab-ci-action@v1.3.0
+    uses: ghcr.io/appleboy/gitlab-ci-action@v1.3.0
     with:
       host: "http://example.com"
       token: ${{ secrets.TOKEN }}
@@ -134,7 +134,7 @@ Show output status
 
 ```diff
   - name: trigger Job
-    uses: appleboy/gitlab-ci-action@v1.3.0
+    uses: ghcr.io/appleboy/gitlab-ci-action@v1.3.0
 +   id: trigger
     with:
       host: "http://example.com"
