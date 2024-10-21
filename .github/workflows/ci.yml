@@ -61,4 +61,6 @@ jobs:
 
       - name: output pipeline
         run: |
+          echo ${{ steps.trigger.outputs.id }}
+          echo ${{ steps.trigger.outputs.sha }}
           echo ${{ steps.trigger.outputs.web_url }}
