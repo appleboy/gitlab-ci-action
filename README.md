@@ -117,6 +117,41 @@ Interval waiting for pipeline to complete, default as `5s`:
 +     interval: 10s
 ```
 
+Allow insecure SSL connections, default as `false`:
+
+```diff
+  - name: trigger Job
+    uses: appleboy/gitlab-ci-action@v1.3.0
+    with:
+      host: "http://example.com"
+      token: ${{ secrets.TOKEN }}
+      debug: true
+      project_id: 100
++     insecure: true
+```
+
+Show output status
+
+```diff
+  - name: trigger Job
+    uses: appleboy/gitlab-ci-action@v1.3.0
++   id: trigger
+    with:
+      host: "http://example.com"
+      token: ${{ secrets.TOKEN }}
+      debug: true
+      project_id: 100
++     wait: true
++     interval: 1s
+
+  - name: print output
+    run: |
+      echo ${{ steps.trigger.outputs.id }}
+      echo ${{ steps.trigger.outputs.sha }}
+      echo ${{ steps.trigger.outputs.web_url }}
+      echo ${{ steps.trigger.outputs.status }}
+```
+
 ## Input variables
 
 * host - Optional. gitlab-ci base url, default as `https://gitlab.com`
