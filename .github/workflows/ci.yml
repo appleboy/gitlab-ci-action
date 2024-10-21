@@ -44,3 +44,21 @@ jobs:
           project_id: ${{ secrets.PROJECT_ID }}
           wait: true
           timeout: 5s
+
+  output:
+    name: output
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: trigger pipeline
+        uses: ./
+        id: trigger
+        with:
+          token: ${{ secrets.PROJECT_TOKEN }}
+          project_id: ${{ secrets.PROJECT_ID }}
+
+      - name: output pipeline
+        run: |
+          echo ${{ steps.trigger.outputs.web_url }}
