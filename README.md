@@ -78,43 +78,43 @@ Pass the variables to the triggered pipeline:
 
 Wait for pipeline to complete, default as `false`:
 
-```yml
-- name: trigger Job
-  uses: appleboy/gitlab-ci-action@v1.2.0
-  with:
-    host: "http://example.com"
-    token: ${{ secrets.TOKEN }}
-    debug: true
-    project_id: 100
-    wait: true
+```diff
+  - name: trigger Job
+    uses: appleboy/gitlab-ci-action@v1.2.0
+    with:
+      host: "http://example.com"
+      token: ${{ secrets.TOKEN }}
+      debug: true
+      project_id: 100
++     wait: true
 ```
 
 Timeout waiting for pipeline to complete, default as `1h`:
 
-```yml
-- name: trigger Job
-  uses: appleboy/gitlab-ci-action@v1.2.0
-  with:
-    host: "http://example.com"
-    token: ${{ secrets.TOKEN }}
-    debug: true
-    project_id: 100
-    wait: true
-    timeout: 60s
+```diff
+  - name: trigger Job
+    uses: appleboy/gitlab-ci-action@v1.2.0
+    with:
+      host: "http://example.com"
+      token: ${{ secrets.TOKEN }}
+      debug: true
+      project_id: 100
++     wait: true
++     timeout: 60s
 ```
 
 Interval waiting for pipeline to complete, default as `5s`:
 
-```yml
-- name: trigger Job
-  uses: appleboy/gitlab-ci-action@v1.2.0
-  with:
-    host: "http://example.com"
-    token: ${{ secrets.TOKEN }}
-    debug: true
-    project_id: 100
-    wait: true
-    interval: 10s
+```diff
+  - name: trigger Job
+    uses: appleboy/gitlab-ci-action@v1.2.0
+    with:
+      host: "http://example.com"
+      token: ${{ secrets.TOKEN }}
+      debug: true
+      project_id: 100
++     wait: true
++     interval: 10s
 ```
 
 ## Input variables
