@@ -135,3 +135,4 @@ Interval waiting for pipeline to complete, default as `5s`:
 * id - The ID of the triggered pipeline.
 * sha - The sha of the triggered pipeline.
 * web_url - The web URL of the triggered pipeline.
+* status - The status of the triggered pipeline. (`running`, `pending`, `success`, `failed`, `canceled`, `skipped`, `manual`, `scheduled`)
