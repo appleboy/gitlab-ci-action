@@ -37,19 +37,25 @@ jobs:
           wait: true
           interval: 1s
 
-      - name: change wait timeout
+      - name: show wait output status
         run: |
           echo "web_url: ${{ steps.wait.outputs.web_url }}"
           echo "status: ${{ steps.wait.outputs.status }}"
 
       - name: change wait timeout
         continue-on-error: true
+        id: wait_timeout
         uses: ./
         with:
           token: ${{ secrets.PROJECT_TOKEN }}
           project_id: ${{ secrets.PROJECT_ID }}
           wait: true
           timeout: 5s
+
+      - name: show wait_timeout status
+        run: |
+          echo "web_url: ${{ steps.wait_timeout.outputs.web_url }}"
+          echo "status: ${{ steps.wait_timeout.outputs.status }}"
 
   output:
     name: output
