@@ -52,28 +52,28 @@ Specific the GitLab host URL:
 
 Other specific `branch` or `tag` name:
 
-```yml
-- name: trigger Job
-  uses: appleboy/gitlab-ci-action@v1.2.0
-  with:
-    host: "http://example.com"
-    token: ${{ secrets.TOKEN }}
-    debug: true
-    project_id: 100
-    ref: v1.0.0
+```diff
+  - name: trigger Job
+    uses: appleboy/gitlab-ci-action@v1.2.0
+    with:
+      host: "http://example.com"
+      token: ${{ secrets.TOKEN }}
+      debug: true
+      project_id: 100
++     ref: v1.0.0
 ```
 
 Pass the variables to the triggered pipeline:
 
-```yml
-- name: trigger Job
-  uses: appleboy/gitlab-ci-action@v1.2.0
-  with:
-    host: "http://example.com"
-    token: ${{ secrets.TOKEN }}
-    debug: true
-    project_id: 100
-    variables: key1=value01,key2=value02
+```diff
+  - name: trigger Job
+    uses: appleboy/gitlab-ci-action@v1.2.0
+    with:
+      host: "http://example.com"
+      token: ${{ secrets.TOKEN }}
+      debug: true
+      project_id: 100
++     variables: key1=value01,key2=value02
 ```
 
 Wait for pipeline to complete, default as `false`:
