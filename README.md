@@ -129,3 +129,9 @@ Interval waiting for pipeline to complete, default as `5s`:
 * wait - Optional. wait for pipeline to complete. Default as `false`.
 * timeout - Optional. timeout waiting for pipeline to complete. Default as `1h`.
 * interval - Optional. interval waiting for pipeline to complete. Default as `5s`.
+
+## Output variables
+
+* id - The ID of the triggered pipeline.
+* sha - The sha of the triggered pipeline.
+* web_url - The web URL of the triggered pipeline.
